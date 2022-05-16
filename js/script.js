@@ -17,11 +17,23 @@ let landingPage = document.querySelector(".landing-page"),
     }
 })
 /************************************************ */
+let bar =  document.querySelector("#bar"),
+    navManue=  document.querySelector("#navBar");
  // show nav item links
-    document.querySelector("#bar").onclick = function () {
-        document.querySelector("#navBar").classList.toggle("show-nav-links")
+ bar.onclick = function () {
+  navManue.classList.toggle("show-nav-links")
         
        }
+  // close navList 
+// function closeNavList(){
+//   document.onclick = function(e){
+// if (  e.ta&& e.target !== navManue &&   navManue.classList.contains("show-nav-links")){
+//   navManue.classList.toggle("show-nav-links")
+//   console.log("not bar")
+// }
+//   }
+// }
+// closeNavList()     
 /************************************************ */
 // setting-box 
 // show setting-box list
@@ -265,10 +277,3 @@ document.getElementById("send").addEventListener("click" , (e) => {
 })
 
 /***************************************************************/
-// input form
-// document.querySelectorAll(".form-item").forEach(formItem => {
-//   formItem.onfocus = (e) => {
-//     e.currentTarget.style.display="none"
-//     e.currentTarget.style.place="none"
-//   }
-// })
