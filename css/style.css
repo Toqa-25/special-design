@@ -740,6 +740,7 @@ border-radius: 50%;
 }
 .testimonial-desc {
     font-style: italic;
+    margin-bottom: 15px;
 }
 .testimonial-item-content {
     display: flex;
@@ -762,6 +763,21 @@ border-radius: 50%;
     .testimonial-head {
         text-align: center;
     }
+    .testimonial-item {
+        max-width: 350px;
+        /* margin: auto; */
+    }
+/* .testimonial-desc {
+    margin-bottom: 15px;
+} */
+}
+@media(max-width:375px){
+    .testimonial-item {
+        max-width: 300px;
+        margin-left: 0;
+        width:300px;
+    }
+
 }
 /*  end testimonials section style */
 /*  start contact section style */
