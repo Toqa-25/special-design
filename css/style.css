@@ -19,6 +19,7 @@ html{
 body{
     font-family: 'Open Sans', sans-serif;
     color:var(--main-color);
+    overflow-x: hidden;
 }
 .container{
     width: 90%;
@@ -55,6 +56,77 @@ body{
     margin-bottom: 10px;
 }
 /* end component style */
+/* start loading style */
+.load-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+}
+.load-page  span{
+    background: transparent;
+    border-radius: 50%;
+}
+.left-spinner {
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    animation: spinner 2s infinite linear ;
+    -webkit-animation: spinner 2s infinite linear ;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.right-spinner {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-right: 2px solid #eee;
+    animation: spinner 2s infinite linear ;
+    -webkit-animation: spinner 2s infinite linear ;
+}
+.load-head{
+    text-transform: capitalize;
+    color: #eee;
+}
+@keyframes spinner{
+    0%{
+        transform:rotate(0deg) ;
+        -webkit-transform:rotate(0deg) ;
+        -moz-transform:rotate(0deg) ;
+        -ms-transform:rotate(0deg) ;
+        -o-transform:rotate(0deg) ;
+}
+50%{
+    transform:rotate(180deg) ;
+    -webkit-transform:rotate(180deg) ;
+    -moz-transform:rotate(180deg) ;
+    -ms-transform:rotate(180deg) ;
+    -o-transform:rotate(180deg) ;
+}
+100%{
+    transform:rotate(360deg) ;
+    -webkit-transform:rotate(360deg) ;
+    -moz-transform:rotate(360deg) ;
+    -ms-transform:rotate(360deg) ;
+    -o-transform:rotate(360deg) ;
+}
+}
+/* end loading style */
+
 /* start setting box style */
 .setting-box {
     position: fixed;
@@ -151,6 +223,11 @@ body{
     top: 50%;
     transform: translatey(-50%);
     z-index: 5;
+}
+@media (max-width:375px){
+    .section-bollet{
+        right:0;
+    }
 }
 .bollet-item {
     display: flex;
@@ -454,6 +531,9 @@ svg.svg-inline--fa.fa-bars {
 }
 /*  end our-skills section style */
 /*  start gallery  section style */
+.gallery .container{
+    position: relative;
+}
 .gallery-content {
     display: flex;
     gap: 15px;
@@ -507,7 +587,7 @@ svg.svg-inline--fa.fa-bars {
     min-width:350px;
     border-radius: 5px;
     /*margin: auto;
-    */position: fixed;
+    */position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
@@ -765,7 +845,7 @@ border-radius: 50%;
     }
     .testimonial-item {
         max-width: 350px;
-        /* margin: auto; */
+        margin: auto;
     }
 /* .testimonial-desc {
     margin-bottom: 15px;

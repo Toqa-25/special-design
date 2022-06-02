@@ -272,8 +272,16 @@ let galleryItems =[... document.querySelectorAll(".gallery-item")],
 /***************************************************************/
 //stop form work 
 document.getElementById("send").addEventListener("click" , (e) => {
-  e.preventDefault()
+  e.preventDefault();
+  // this.style
   console.log("k")
 })
 
 /***************************************************************/
+// window.onload =( function (e){
+// document.querySelector(".load-page").style.diaplay="none"
+// })()
+window.addEventListener("load" ,function (e){
+ document.querySelector(".load-page").style.display="none";
+ console.log("loaded")
+   } )
