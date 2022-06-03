@@ -278,10 +278,11 @@ document.getElementById("send").addEventListener("click" , (e) => {
 })
 
 /***************************************************************/
-// window.onload =( function (e){
-// document.querySelector(".load-page").style.diaplay="none"
-// })()
+// loadin effect
+
 window.addEventListener("load" ,function (e){
  document.querySelector(".load-page").style.display="none";
- console.log("loaded")
+ console.log("loaded");
+ document.querySelector("body").style.cssText="overflow-y: auto;";
+
    } )
